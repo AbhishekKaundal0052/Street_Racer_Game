@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Racing+Sans+One&display=swap');
+*{
+    font-family: 'Racing Sans One';
+    padding:0;
+    margin:0;
+    text-align: center;
+}
+.over{
+    position: relative;
+    top:20vh;
+    font-size: 8vw;
+}
+#buttons{
+    display: flex;
+    position: relative;
+    top: 35vh;
+    justify-content: space-evenly;
+    font-size: 5vw;
+    height: 5vh;
+}
+#again{
+    text-decoration: none;
+    font-size: 1vw;
+    background-color: red;
+    color:white;
+    width: 20vw;
+}
+#home{
+    text-decoration: none;
+    font-size: 1vw;
+    background-color: red;
+    color:white;
+    width: 20vw;
+}
