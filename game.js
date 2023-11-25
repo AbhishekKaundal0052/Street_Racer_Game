@@ -38,7 +38,7 @@ var your = document.getElementById('your');
 
 let item = document.querySelectorAll('.item')
 function incoming() {
-    
+
     let a = vehicles[getRandomInt(0, vehicles.length - 1)];
     traffic.innerHTML += `
         <img src="${a}" alt="" class="item" id="${car}">
@@ -63,19 +63,12 @@ function checkAccident(ride) {
             lives--;
             collisionEvent(car2);
             collisionBool = true;
-            if (lives === 0){
+            if (lives === 0) {
                 gameOver()
             }
         }
-        // if (trafficRect.bottom <= window.innerHeight) {
-        //     collisionEvent(car2);
-
-            
-        // }
     }
-   
 }
-
 
 var more = document.querySelector('.more')
 function gameOver() {
@@ -105,19 +98,21 @@ setInterval(() => {
     more.innerText = `lives: ${lives}`;
     scoreBox.innerText = `score: ${score}`
     localStorage.setItem('score', score)
-},1)
+}, 1)
 setInterval(() => {
     incoming();
-    if(collisionBool){}
-    else{
-        score+=5   
+    if (collisionBool) { }
+    else {
+        score += 5
     }
     collisionBool = false
 }, 2500)
 ride.style.top = "600px";
 var rev = new Audio('assets/acceleration-2-31325.mp3')
 var idle = new Audio('assets/rally-car-idle-loop-14-32339.mp3')
+
 // Event listener for player-controlled car movement
+
 window.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') {
         ride.style.left = parseInt(window.getComputedStyle(ride).left) - 20 + 'px';

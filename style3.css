@@ -21,7 +21,7 @@ body{
     position: relative;
     top:10vw; 
 }
-.well{
+#message{
     font-size: 5vw;
     color: white;
     font-style: italic;
@@ -36,7 +36,8 @@ body{
     -webkit-text-stroke: 3px red;
     position: absolute;
     top: 30vw;
-    left: 85vh;
+    left: 38vw;
+    right: auto;
 }
 #buttons{
     display: flex;
@@ -53,7 +54,7 @@ body{
     font-size: 1vw;
     background-color: rgba(255, 0, 0, 0.801);
     color:white;
-    width: 20vw;
+    width: 9vw;
     border-radius: 2vw;
     padding : 1vw;
 }
@@ -62,7 +63,7 @@ body{
     font-size: 1vw;
     background-color: rgba(255, 0, 0, 0.804);
     color:white;
-    width: 20vw;
+    width: 9vw;
     border-radius: 2vw;
     padding : 1vw;
 }
