@@ -78,6 +78,7 @@ input:hover{
     height: 25vh;
     width: 25vw;
     top: 70vh;
+    margin-left: 3vw;
     justify-content: space-between;
 
 }
@@ -111,7 +112,7 @@ input:hover{
     height: 5vh;
     width: 10vw;
     font-size: 2vw;
-    margin-left: 20vw;
+    margin-left: 5vw;
     border-radius: 20px;
     cursor:pointer;
     padding: 15px;
@@ -134,33 +135,32 @@ input:hover{
 #info:hover{
     border: 5px solid white;
 }
-/* Add this code at the end of your existing CSS */
 
-/* Media query for iPhone 12 Pro */
-@media only screen and (max-width: 390px) {
-    body {
-        background-size: contain;
-    }
-
+@media (orientation: portrait) {
     a {
-        font-size: 8vw;
+        font-size: 20vw;
+        -webkit-text-stroke: 1px red;
     }
 
     input {
         width: 70vw;
         font-size: 4vw;
     }
-
+    #buttons{
+        font-size: 0.5vw;
+        width: 12vw; 
+        right: 92vw;
+    }
     #popup,
     #popup2 {
         font-size: 5vw;
-        padding: 15px;
+        padding: 7vw;
     }
 
     #popup2 {
-        height: 25vh;
+        height: 35vh;
         width: 90vw;
-        top: 15vh;
+        top: 30vh;
     }
 
     .vehicle {
@@ -172,14 +172,24 @@ input:hover{
     #car {
         width: 35vw;
     }
-
-    #play,
-    #start,
     #info {
         width: 40vw;
         margin-left: 15vw;
         margin-right: 15vw;
         font-size: 5vw;
-        padding: 10px;
+        padding: 3vw;
+    }
+    #play{
+        margin-left: 10vw;
+        font-size: 5vw;
+        padding: 3vw;
+        width: 50vw;
+    }
+    #start{
+        width: 40vw;
+        margin-left: 45vw;
+        justify-content: center;
+        font-size: 5vw;
+        padding: 3vw;
     }
 }
