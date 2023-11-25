@@ -15,6 +15,7 @@ play.addEventListener('click', function () {
     popup.style.display = "none";
     play.style.display = "none";
     infobtn.style.display = "none";
+    // start.style.marginLeft = "1vw";
     start.style.display = "block";
 })
 let n = document.getElementById('name')
