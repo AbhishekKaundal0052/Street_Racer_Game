@@ -1,35 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Jua&family=Racing+Sans+One&display=swap');
-*{
+
+* {
     font-family: 'Racing Sans One';
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
     text-align: center;
 }
-body{
-    text-align:center;
+
+body {
+    text-align: center;
     background-image: url('assets/Jdm GIF - Jdm - Discover & Share GIFs.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh; 
+    height: 100vh;
 }
-.over{
+
+.over {
     font-size: 10vw;
     color: white;
     font-style: italic;
     -webkit-text-stroke: 5px red;
     position: relative;
-    top:10vw; 
+    top: 10vw;
 }
-#message{
+
+#message {
     font-size: 5vw;
     color: white;
     font-style: italic;
     -webkit-text-stroke: 3px red;
     position: relative;
-    top:10vw; 
+    top: 10vw;
 }
-#score{
+
+#score {
     font-size: 5vw;
     color: white;
     font-style: italic;
@@ -39,7 +44,8 @@ body{
     left: 38vw;
     right: auto;
 }
-#buttons{
+
+#buttons {
     display: flex;
     position: relative;
     top: 40vh;
@@ -49,21 +55,54 @@ body{
     height: 7vh;
     width: 60vw;
 }
-#again{
+
+#again {
     text-decoration: none;
     font-size: 1vw;
     background-color: rgba(255, 0, 0, 0.801);
-    color:white;
+    color: white;
     width: 9vw;
     border-radius: 2vw;
-    padding : 1vw;
+    padding: 1vw;
 }
-#home{
+
+#home {
     text-decoration: none;
     font-size: 1vw;
     background-color: rgba(255, 0, 0, 0.804);
-    color:white;
+    color: white;
     width: 9vw;
     border-radius: 2vw;
-    padding : 1vw;
+    padding: 1vw;
+}
+
+@media (orientation: portrait) {
+    #buttons {
+        top: 30vh;
+        width: 100vw;
+        left:0vw;
+        height: 3vh;
+    }
+
+    .over {
+        font-size: 30vw;
+    }
+
+    #score {
+        top: 55vh;
+        font-size: 11vw;
+        left: 25vw;
+    }
+
+    #message {
+        top: 10vh;
+        font-size: 10vw;
+    }
+
+    #again,
+    #home {
+        font-size: 3vw;
+        width: 40vw;
+    }
+
 }
