@@ -100,11 +100,11 @@ body{
 .score{
     position: absolute;
     height: 10vh;
-    width: 12vw;
+    width: 15vw;
     top: 20vh;
     background-color: red;
     color: white;
-    left: 2vw;
+    left: 0.5vw;
     font-size: 3vw;
     padding: 10px;
     border-radius: 20px;

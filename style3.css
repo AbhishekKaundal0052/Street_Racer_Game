@@ -5,30 +5,64 @@
     margin:0;
     text-align: center;
 }
+body{
+    text-align:center;
+    background-image: url('assets/Jdm GIF - Jdm - Discover & Share GIFs.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh; 
+}
 .over{
+    font-size: 10vw;
+    color: white;
+    font-style: italic;
+    -webkit-text-stroke: 5px red;
     position: relative;
-    top:20vh;
-    font-size: 8vw;
+    top:10vw; 
+}
+.well{
+    font-size: 5vw;
+    color: white;
+    font-style: italic;
+    -webkit-text-stroke: 3px red;
+    position: relative;
+    top:10vw; 
+}
+#score{
+    font-size: 5vw;
+    color: white;
+    font-style: italic;
+    -webkit-text-stroke: 3px red;
+    position: absolute;
+    top: 30vw;
+    left: 85vh;
 }
 #buttons{
     display: flex;
     position: relative;
-    top: 35vh;
-    justify-content: space-evenly;
+    top: 40vh;
+    left: 20vw;
+    justify-content: space-between;
     font-size: 5vw;
-    height: 5vh;
+    height: 7vh;
+    width: 60vw;
 }
 #again{
     text-decoration: none;
     font-size: 1vw;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.801);
     color:white;
     width: 20vw;
+    border-radius: 2vw;
+    padding : 1vw;
 }
 #home{
     text-decoration: none;
     font-size: 1vw;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.804);
     color:white;
     width: 20vw;
+    border-radius: 2vw;
+    padding : 1vw;
 }

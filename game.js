@@ -9,6 +9,7 @@ var lives = maxLives;
 
 let collisionBool = false
 
+localStorage.setItem('score', 0)
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
@@ -46,7 +47,7 @@ function incoming() {
     car++;
     traffic.style.animationDuration = `${getRandomInt(2, 3)}s`;
     var random = Math.floor(Math.random() * 4);
-    left = random * 10;
+    left = random * 9;
     traffic.style.left = left + "vw";
 }
 var scoreBox = document.querySelector('.score')
@@ -62,6 +63,9 @@ function checkAccident(ride) {
             lives--;
             collisionEvent(car2);
             collisionBool = true;
+            if (lives === 0){
+                gameOver()
+            }
         }
         // if (trafficRect.bottom <= window.innerHeight) {
         //     collisionEvent(car2);
@@ -87,12 +91,6 @@ function resetGame() {
     ride.style.left = '0px';
     ride.style.top = '0px';
 
-    // Reset traffic cars
-
-    // traffic.addEventListener('animationiteration', () => {
-
-    // });
-    // }
     more.innerText = lives;
 }
 incoming(); // Initial traffic car
@@ -105,7 +103,8 @@ function collisionEvent(car2) {
 setInterval(() => {
     checkAccident(ride)
     more.innerText = `lives: ${lives}`;
-    scoreBox.innerText = `score: ${score}`;
+    scoreBox.innerText = `score: ${score}`
+    localStorage.setItem('score', score)
 },1)
 setInterval(() => {
     incoming();
