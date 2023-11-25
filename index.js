@@ -23,7 +23,7 @@ let nickname = document.getElementById('nickname')
 
 
 start.addEventListener('click', function () {
-    if(n.value === '' && nickname.value === ''){
+    if(n.value === '' || nickname.value === ''){
         alert('Enter your name racer!!')
     }
     else{
