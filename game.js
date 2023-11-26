@@ -13,7 +13,7 @@ localStorage.setItem('score', 0)
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
-
+//This array have different images of traffic cars 
 const vehicles = [
     'assets/car 1.svg',
     'assets/car 2.svg',
@@ -29,17 +29,12 @@ const vehicles = [
 ];
 
 var your = document.getElementById('your');
-// traffic.addEventListener('animationiteration', () => {
-//     var random = Math.floor(Math.random() * 4);
-//     left = random * 10;
-//     console.log(left)
-//     traffic.style.left = left + "vw";
-// });
 
 let item = document.querySelectorAll('.item')
-function incoming() {
 
-    let a = vehicles[getRandomInt(0, vehicles.length - 1)];
+// function to make different cars come on the highway in different lanes 
+function incoming() {
+a = vehicles[getRandomInt(0, vehicles.length - 1)];
     traffic.innerHTML += `
         <img src="${a}" alt="" class="item" id="${car}">
     `;
@@ -51,6 +46,8 @@ function incoming() {
     traffic.style.left = left + "vw";
 }
 var scoreBox = document.querySelector('.score')
+
+// function to check if there is an accident happened or not
 function checkAccident(ride) {
     for (let i = 0; i < trafficCars.length; i++) {
         let car2 = document.getElementById(`${i}`);
@@ -71,6 +68,7 @@ function checkAccident(ride) {
 }
 
 var more = document.querySelector('.more')
+// to check if game is over
 function gameOver() {
     console.log("Game Over");
     location.href = "gameover.html"
@@ -92,13 +90,14 @@ function collisionEvent(car2) {
     car2.style.display = 'none'
     incoming()
 }
-
+// Interval that checks accident and updates the lives and score
 setInterval(() => {
     checkAccident(ride)
     more.innerText = `lives: ${lives}`;
     scoreBox.innerText = `score: ${score}`
     localStorage.setItem('score', score)
 }, 1)
+// This interval adds score whenever the car passes
 setInterval(() => {
     incoming();
     if (collisionBool) { }
@@ -107,6 +106,7 @@ setInterval(() => {
     }
     collisionBool = false
 }, 2500)
+// Audio if you move forward or backward
 ride.style.top = "600px";
 var rev = new Audio('assets/acceleration-2-31325.mp3')
 var idle = new Audio('assets/rally-car-idle-loop-14-32339.mp3')
