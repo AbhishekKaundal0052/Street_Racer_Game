@@ -9,7 +9,6 @@
  3. you can move forward, sideways and backward also using arrow keys.
  4. Each car passes by through you you earn a +5 score.
  5. But you have only 4 lives, if you collide 4 times then the game will be over.
-# Project Link
-https://abhishekkaundal0052.github.io/Street_Racer_Game/index.html
+# Live Link: [StreetRacerGame](https://github.com/AbhishekKaundal0052/Street_Racer_Game)
 # Credits 
-I have taken reference from some youtubers,i.e, Knifecircus and Canta coders
+I have taken reference from some youtubers i.e, Knifecircus and Canta coders
